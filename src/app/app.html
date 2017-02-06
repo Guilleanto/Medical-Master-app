@@ -1,0 +1,39 @@
+<ion-menu side="right" [content]="content">
+  <ion-header>
+    <ion-toolbar class="background-tool">
+      <ion-title class="menu">Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+     
+      <button menuClose ion-item icon-right class="item-headmenu" *ngFor="let p of pages" (click)="openPage(p)">
+        <ion-icon class="col-icon" name="{{p.icon}}" large  ></ion-icon>
+        {{p.title}}
+      </button>
+        <ion-row>
+             <ion-col >
+      <button ion-item menuClose icon-right class="item-headmenu" (click)="Perfil()"  >
+       <ion-icon class="col-icon" name="person" large  ></ion-icon>
+         Perfil
+         
+      </button> 
+        </ion-col>
+        </ion-row>
+         <ion-row>       
+      <button ion-item menuClose icon-right class="item-headmenu" (click)="Tutorial()"  >
+       <ion-icon class="col-icon" name="md-information-circle" large  ></ion-icon>
+        Guía rapida
+         
+      </button> 
+        
+         
+      </ion-row>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

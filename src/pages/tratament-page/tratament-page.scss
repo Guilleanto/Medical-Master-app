@@ -1,0 +1,166 @@
+page-tratament-page {
+
+label{
+    text-align: center;
+}
+h3{
+    text-align: center;
+    font-size: 2rem
+}
+h2{
+    text-align: center;
+}
+
+  .card-background-page {
+     
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+}
+.header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+   
+    background-image: none;
+   
+}
+.bar-button-default-md, page-admin .bar-button-clear-md-default, page-admin .bar-button-md-default {
+    color: #f8f8f8;
+    background-color: transparent;
+}
+.navbar{
+    color: white;
+    text-align: center;
+        
+}
+.prox-fecha{
+        font-size: 2rem;
+        font-family: junction-bold;
+}
+
+.card{
+    background-color: rgba(255, 255, 255, 0.73);
+    border-radius: 30px;
+    box-shadow: 3px 21px 35px -22px rgba(0,0,0,0.75);
+}
+
+.img-card{
+    width: 60%;
+    margin-left: 20%;
+    
+}
+.titleNav{
+    font-family: junction-bold;
+}
+
+.img-card-pill{
+    
+        position: absolute;
+    width: calc(100px + 20%);
+    top: calc(100px + 40%);
+    right: -5%;
+}
+.button-card{
+    width: 70%;
+    margin-bottom: 10%;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding-left: 10px !important;
+    background-color: rgba(204, 29, 29, 0.77);
+    color: white;
+    box-shadow: -1px 2px 56px -7px #779fe4;
+    font-family: junction-bold;
+        font-size: 15px;
+}
+.button-cardUpdate{
+    width: 70%;
+    margin-bottom: 10%;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding-left: 10px !important;
+    color: white;
+    box-shadow: -1px 2px 56px -7px #779fe4;
+    font-family: junction-bold;
+}
+.button-text{
+    font-size: 12px;
+    font-family: junction-bold;
+}
+
+.row{
+    margin-left: 10%;
+}
+.col{
+        margin-right: -4%;
+}
+.card-titulo{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-family: Bariol_Bold;
+   font-size: 25px;
+    color: #378dbe;
+}
+.card-header{
+    text-align: left;
+    margin-left: 5%;
+    font-family: junction-bold;
+    font-size: 15px;
+
+}
+.card-header-detail{
+    text-align: left;
+    margin-left: 5%;
+    font-family: junction-bold;
+    font-size: 15px;
+
+}
+.content{
+    text-align: left;
+    font-family: junction-regular;
+    font-size: 14px;
+    
+    
+}
+.card-content-text{
+    font-family: junction-bold;
+    font-size: 1.9rem;
+    text-align: center;
+}
+.card-content-subtext{
+    font-family: junction-regular;
+    font-size: 1.5rem;
+    color: #635c5c;
+    text-align: center;
+}
+.item-Profile{
+    border-radius: 15px;
+    position: relative;
+    padding-right: 0;
+    padding-left: 16px;
+    font-size: 1.6rem;
+    font-weight: normal;
+    text-transform: none;
+    color: #000;
+    background-color: rgb(69, 137, 187);
+    box-shadow:  0px 12px 28px -7px rgba(0,0,0,0.75);
+    //transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-background-page {
+ 
+    background-color: #f5f5f5;
+  ion-card {
+    position: relative;
+    text-align: center;
+  }
+}
+   .card-content{
+      text-align: justify;
+      text-justify: inter-word;
+          padding: 20px 16px 13px 16px;
+  }
+.card-md h3, .card-md h4, .card-md h5, .card-md h6 {
+    margin: 2px 0;
+    font-size: 2rem;
+    font-weight: normal;
+    color: #222;
+}
+}
+

@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar color="primary">
+     <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-center>
+      Medicamentos
+      </ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content  padding class="card-background-page">
+<ion-list>
+  <ion-item-sliding *ngFor="let item of todos; let i = index" >
+  <ion-item >
+    <ion-avatar item-left>
+    <img  src="assets/img/pills.png"/>
+    </ion-avatar>
+    <ion-icon color="primary" name="md-swap" item-right large ></ion-icon>
+    <h2>{{ item.text }} </h2> <br>
+     <h3>Desde el: {{ item.at | date:"EEEE" }}, a las: {{ item.at | date: "hh:ma"  }}</h3>
+  </ion-item>
+  <ion-item-options side="right">
+    <button  class="button-detalles" ion-button color="primary" (click)="editTodo(item)">
+        <ion-icon name="text"></ion-icon>
+        Detalles
+      </button>
+  </ion-item-options>
+  <ion-item-options side="left">
+      <button class="button-borrar" ion-button color="danger" (click)="presentPopover(i, $event, item)">
+        <ion-icon  name="md-trash" item-right  ></ion-icon>
+        Borrar
+      </button>
+  </ion-item-options>
+  </ion-item-sliding>
+</ion-list>
+<ion-fab right bottom>
+    <button ion-fab color="danger" (click)="newTodo()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>
+ 

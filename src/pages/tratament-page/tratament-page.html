@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-navbar class="navbar">
+    <button ion-button menuToggle right>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title class="titleNav" style="text-align: center">Tu Tratamiento</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding class="card-background-page" >
+
+<ion-card class="card"  >
+   <div class = "item item-image">
+    <img class="img-card" src="assets/img/pic2.png">
+  </div>
+  <ion-card-header class="card-content-text">
+   Doctor:  Gustavo Torres <br>
+   Oncólogo Cirujano.
+   </ion-card-header>
+   <ion-card-header class="card-content-subtext" >  
+   Maternidad La Floresta, C.A <br> Maracay- Edo.Aragua
+   </ion-card-header>
+   <button ion-button   color="primary" class="button-cardUpdate"  (click)="Update()">Actualizar</button>
+</ion-card>
+  
+
+<div class="align">
+
+<ion-card class="card">
+   <div class = "img-card-pill-color">
+    <img class="img-card-pill" src="assets/img/pill.png">
+  </div>
+   <div class="card-titulo">DETALLES</div>
+<div class="card-header"> Ultimo Recipe:</div>
+  <ion-card-content class="content"> <!-- Para obetener los valores de un mismo atributo de varios objetos en un array -->
+        <h3  *ngIf="prescripcion == null ">Sin registro</h3> 
+         <h3  *ngIf="prescripcion != null ">   {{ prescripcion }} </h3> 
+       
+           
+  </ion-card-content>
+  <div class="card-header" >Ultima Indicación:</div>
+  <ion-card-content class="content" > <!-- *ngFor="let datosIndicacion of mydataIndication;trackBy:mydataIndication?.indication" para repetir una lista de valores de un objeto {{datos.Indication.indication}}-->
+         
+          <h3>{{ indi  }}</h3>
+          
+  </ion-card-content>
+  <button ion-button   color="danger" class="button-card"  (click)="button2()">Programar Alertas </button>
+  <div class="card-header" >
+  Proxima Cita de control:
+     
+  </div>
+  <ion-card-content class="content" > 
+           <h2 class="prox-fecha">{{ date_hora }}</h2>
+  </ion-card-content>
+   <button ion-button  color="danger" class="button-card"  (click)="button()">Agendar Cita o Estudio</button>
+  
+</ion-card>
+ 
+</div>
+</ion-content>
+

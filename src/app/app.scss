@@ -1,0 +1,87 @@
+// http://ionicframework.com/docs/v2/theming/
+ion-content {
+  background-image: url('../assets/img/FondoD.png');
+  -webkit-background-image: url('../assets/img/FondoD.png');
+}
+.toolbar-title-md {
+    padding: 0 12px;
+    font-size: 2rem;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+}
+[icon-right] ion-icon {
+    font-size: 1.4em;
+    line-height: .67;
+    pointer-events: none;
+    padding-right: 15%;
+}
+.md ion-menu[type=overlay] .menu-inner {
+    box-shadow: 0 0 10px #f8f8f8;
+}
+.menu-inner > ion-header, .menu-inner > ion-content, .menu-inner > ion-footer {
+    position: absolute;
+    
+}
+.item-headmenu{
+   
+    color: white;
+    background-color: transparent;
+    font-family: junction-regular;
+}
+.background-tool{
+    background-color: rgba(225, 56, 56, 0.68);
+}
+.toolbar-background-md {
+    border-color: #b2b2b2;
+     background: none;
+}
+@font-face {
+    font-family: 'Lato-Regular';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Lato-Regular'), local('Lato-Regular'), url("../assets/fonts/Lato-Regular.ttf") format('woff');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000
+}
+
+@font-face {
+    font-family: 'Lato-Light';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Lato-Light'), local('Lato-Light'), url("../assets/fonts/Lato-Light.ttf") format('woff');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000
+}
+@font-face {
+    font-family: 'junction-bold';
+    font-style: normal;
+    font-weight: 300;
+    src: local('junction-bold'), local('junction-bold'), url("../assets/fonts/junction-bold.ttf") format('woff');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000
+}
+@font-face {
+    font-family: 'junction-regular';
+    font-style: normal;
+    font-weight: 300;
+    src: local('junction-regular'), local('junction-regular'), url("../assets/fonts/junction-regular.ttf") format('woff');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000
+}
+@font-face {
+    font-family: 'Bariol_Bold';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Bariol_Bold'), local('Bariol_Bold'), url("../assets/fonts/Bariol_Bold.otf") format('woff');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000
+}
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
