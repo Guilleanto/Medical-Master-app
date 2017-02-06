@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-navbar color="primary"  class="show-back-button">
+    <ion-title text-center>
+        Agregar Alerta 
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content>
+ 
+    <ion-list padding>
+         <form  #form="ngForm" novalidate>
+        <ion-item>
+            <ion-label class="label-detail-title">Información del medicamento<br><br>
+            * Campos requeridos</ion-label>
+        </ion-item>
+        <ion-item>
+            <div>
+             
+                <ion-row>
+                    <ion-col class="trata">
+                    Tú Tratamiento Fecha:
+                    </ion-col>
+                    <ion-col class="trata">
+                        {{Fechatrata}}
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                Ultimo tratamiento:
+                    </ion-col>
+                    <ion-col>{{ prescripcion}} </ion-col>
+                    
+                </ion-row>
+                <ion-row>
+                    <ion-col>Indicación: </ion-col>
+                    <ion-col>{{ indi }} </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+            <ion-item class="no-padding">
+          <ion-label class="label-detail" >Comenzar desde las: </ion-label>
+          <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="notifyTime" [ngModelOptions]="{standalone: true}" (ionChange)="timeChange($event)"></ion-datetime>
+        </ion-item>
+ 
+        
+            <ion-item class="no-padding">
+                <ion-input  placeholder="Nombre del Medicamento (*)" [(ngModel)]="data.pastilla" name="pastilla" class="label-detail" required ></ion-input>
+            </ion-item>
+
+            <ion-item class="no-padding">
+                <ion-input placeholder="Cantidad de mediamento a suministrar (*)" [(ngModel)]="data.dosis" type="number" name="dosis" class="label-detail" required ></ion-input>
+            </ion-item>
+
+            <ion-item class="no-padding">
+                <ion-input placeholder="Concentración del medicamento ej: (250 mg)" [(ngModel)]="data.concent" name="concent" class="label-detail"  ></ion-input>
+            </ion-item>
+         </form>
+         
+ <form [formGroup]="myform" novalidate >
+            <ion-item class="no-padding">
+                <ion-input placeholder="Tomar cada: (horas)(*)" [(ngModel)]="data.horasP" formControlName="numero" type="number" [class.invalid]="!myform.controls.numero.valid && myform.controls.numero.dirty"  required class="label-detail"  ></ion-input>
+            </ion-item>
+            <ion-item *ngIf="!myform.controls.numero.valid  && myform.controls.numero.dirty">
+                <p>Porfavor ingrese un numero valido</p>
+            </ion-item>
+
+             <ion-item class="no-padding">
+                <ion-input placeholder="Duración: (Días)(*) " [(ngModel)]="data.diasP" formControlName="numero2"  type="number" [class.invalid]="!myform.controls.numero2.valid && myform.controls.numero2.dirty" required class="label-detail"  ></ion-input>
+            </ion-item>
+            <ion-item *ngIf="!myform.controls.numero2.valid  && myform.controls.numero2.dirty">
+                <p>Porfavor ingrese un numero valido.</p>
+            </ion-item>
+       
+   </form>
+    </ion-list>
+ 
+  
+<button type="submit" block [disabled]="!form.valid || !myform.controls.numero.valid || !myform.controls.numero2.valid" ion-button color="primary" class="button-guardar" (click)="addNotifications()" large >Guardar</button>
+  <button (click)="cancelAll()" block ion-button color="danger" >Cancelar Todas las Alertas</button>
+</ion-content>
+ 
+<ion-footer>
+   
+ 
+</ion-footer>
