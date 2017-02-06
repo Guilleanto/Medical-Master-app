@@ -30,7 +30,7 @@ import { ProfilePage } from '../pages/profile/profile';
 
 /*const cloudSettings: CloudSettings = {
   'core': {
-    'app_id': 'a28c2406'
+    'app_id': ''
   },
   'push': {
     'sender_id': 'SENDER_ID',
