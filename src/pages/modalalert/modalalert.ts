@@ -7,7 +7,7 @@ Desarrolladores:
 Ing. Guillermo Ochoa Torres
 Ing. Emanuel Torres Clemente
 Lugar: Maracay - Estado Aragua - Venezuela
-Version: 1.1
+Version: 0.1.1
 Año: 2017 - 2018 */
 import { Component } from '@angular/core';
 import { NavController, Platform, AlertController, ViewController, NavParams } from 'ionic-angular';
